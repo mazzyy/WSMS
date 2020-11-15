@@ -1,6 +1,9 @@
 @extends('layouts.app')
+@section('left')
+<a href="/dashboard" class="btn btn-light"><h3>&#8592;</h3></a>
+@endsection
 @section("content")
-<form method="GET" action="/mystore">
+<form name="create" method="GET" action="/mystore" onsubmit="return validateForm()">
     <div class="form-group">
       <label for="exampleFormControlInput1">Name</label>
       <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Abdul">
@@ -16,3 +19,16 @@
     <button type="submit" class="btn btn-primary mb-2">Confirm</button>
   </form>
 @endsection
+
+<script>
+  function validateForm() {
+  var x = document.forms["create"]["name"].value;
+  var y = document.forms["create"]["number"].value;
+  var z = document.forms["create"]["address"].value;
+
+  if (x == "" || y=="" || z=="") {
+    alert("form must be filled out");
+    return false;
+}
+}
+  </script>

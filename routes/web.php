@@ -13,14 +13,18 @@ use App\Http\Controllers\clientController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-//client
+//welcome
+
+Route::get('/',"App\Http\Controllers\welcome@index");
+Route::get('/info',"App\Http\Controllers\welcome@info");
+
+
+//client and dashboard
 Route::get('dashboard/{id}/update',"App\Http\Controllers\clientController@update1");
 Route::get('dashboard/{id}/DELETE',"App\Http\Controllers\clientController@delete");
 Route::get('/mystore',"App\Http\Controllers\clientController@mystore");
 Route::resource("/dashboard","App\Http\Controllers\clientController");
+Route::get('/info/status',"App\Http\Controllers\clientController@status");
 
 //record
 Route::get("/dashboard/{id}/client","App\Http\Controllers\dataController@index");

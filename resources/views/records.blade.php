@@ -2,7 +2,7 @@
 @section('left')
 <div class="bg-light">
 <a href="/dashboard" class="btn btn-light"><h3>&#8592;</h3></a>
-<form method="GET" action="/dashboard/{{$id}}/client/record"  style="padding-top: 21%" class="border-right pr-2">
+<form name="record" method="GET" onsubmit="return validateForm()" action="/dashboard/{{$id}}/client/record"  style="padding-top: 21%" class="border-right pr-2">
   <h1>RECORDS</h1>
   <div class="form-group">
     <label for="exampleFormControlInput1">Bottles</label>
@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
       <label for="exampleFormControlInput1">Day</label>
-      <input name="day" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Number">
+      <input name="day" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Number">
   </div>
  
 <input type="hidden" name="client_id" id="" value="{{$id}}">
@@ -24,7 +24,7 @@
 @section('content')
 <header  class="p-2 mb-2 bg-dark text-white">
   {{-- date select --}}
-    <form action="/dashboard/{{$id}}/date">
+    <form name="date"  action="/dashboard/{{$id}}/date" onsubmit="return validateForm()">
         <label for="bdaymonth">Data record (month and year):</label>
         <input  name="bdaymonth1" type="month" id="bdaymonth">
     <input type="hidden" id="bdaymonth" name="id" value="{{$id}}">
@@ -58,7 +58,13 @@
      
       <td>{{$item->number}}</td>
       <td>{{$item->address}}</td>
-      <td><a href="/dashboard/{{$item->id}}/delete" class="btn btn-dark">DELETE</a></td>
+  <td>
+<form action="/dashboard/{{$item->id}}/delete" method="GET">
+<input type="hidden" value="{{$currentdate}}" name="record">
+  <input type="submit" class="btn btn-dark" value="DELETE">
+</form>
+  </td>
+      {{-- <td><a href="/dashboard/{{$item->id}}/delete" type="submit" name="delete" class="btn btn-dark">DELETE</a></td> --}}
     </tr>
     @endforeach
     @endif
@@ -70,3 +76,17 @@
   </tbody>
 </table>
 @endsection
+
+
+<script>
+  function validateForm() {
+  var x = document.forms["record"]["bottle"].value;
+  var y = document.forms["record"]["day"].value;
+  var z = document.forms["date"]["bdaymonth1"].value;
+
+  if (x == "" || y=="" || z=="") {
+    alert("form must be filled out");
+    return false;
+}
+}
+  </script>

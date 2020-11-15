@@ -25,12 +25,13 @@ body {
   
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background: linear-gradient(-135deg,#06beb6 ,#4158d0);
+  background: linear-gradient(-135deg,#06beb638 ,#56202045);
+  
 }
 </style>
 <body >
     <div id="app" >
-        <nav  style="background: linear-gradient(-135deg,#06beb62e ,#4158d01f);" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav  style="background: linear-gradient(-135deg,#06beb6 ,#4158d0);" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}

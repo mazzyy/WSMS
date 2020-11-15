@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Record;
 use App\Models\clients;
 use Illuminate\Support\Facades\Auth;
-
+use Carbon\Carbon;
 
 class clientController extends Controller
 {
@@ -25,7 +25,7 @@ class clientController extends Controller
         // dd($clients);
         
         
-        
+      
         return view("dashboard")->with("clients", $clients);
     }
 
@@ -149,5 +149,28 @@ class clientController extends Controller
        $client->save();
         
      return redirect("dashboard");        
+    }
+
+    public function status(Request $request){
+            $yoo=$request->input();
+                  $select=$request->input("select");
+                //   $yoo=explode(':', $yoo);
+                $checkbox=array();
+                $i=0;
+                foreach ($yoo as $key => $array)
+                {
+                     $client_checkbox=clients::find($key);
+                     if(isset($client_checkbox))
+                     {
+                     $client_checkbox->status=$select;
+                     $client_checkbox->save();
+                     $checkbox[$i]=$key;
+                     }
+                     $i++;
+                }
+                
+
+                 
+        return redirect()->back();
     }
 }
