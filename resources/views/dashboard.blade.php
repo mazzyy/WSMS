@@ -4,7 +4,7 @@
 <div class="text-center  row border">
     <a href="/dashboard/create" class="btn btn-info pb-1 font-weight-bold">Create Client</a>
     
-    <h1 style="padding-left:20%">WATERSUPPLY</h1>
+<h1 style="padding-left:20%">{{Auth::user()->name}}</h1>
 </div>
 
   <table class="table table-striped ">
