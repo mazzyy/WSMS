@@ -25,6 +25,9 @@ Route::get('dashboard/{id}/DELETE',"App\Http\Controllers\clientController@delete
 Route::get('/mystore',"App\Http\Controllers\clientController@mystore");
 Route::resource("/dashboard","App\Http\Controllers\clientController");
 Route::get('/info/status',"App\Http\Controllers\clientController@status");
+Route::get('/login/client',"App\Http\Controllers\clientController@loginclient");
+Route::post('/client/home',"App\Http\Controllers\clientController@clientloginauth");
+
 
 //record
 Route::get("/dashboard/{id}/client","App\Http\Controllers\dataController@index");

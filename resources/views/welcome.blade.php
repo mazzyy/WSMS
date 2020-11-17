@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
     <title>Document</title>
 </head>
-<body>
+<style>
+body {
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  
+}
+</style>
+<body class="">
     <div class="container-fluid p-0 m-0">
         <nav  style="background: linear-gradient(-135deg,#06beb6 ,#4158d0);" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -26,12 +42,22 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto float-right">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="nav-item ">
+                                
+                                <div class="dropdown" style="padding-top:11%;">
+                                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Login
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="{{ route('login') }}">{{ __('Company') }}</a>
+                                           <a class="dropdown-item" href="login/client">{{ __('client') }}</a>
+                                            {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                                        </div>
+                                    </div>
                                 </li>
                             @endif
                             
@@ -63,6 +89,7 @@
                 </div>
             </div>
         </nav>
+        
         <header class="border">
         <div class="row">
             <div class="col-md-4"></div>
@@ -80,9 +107,9 @@
         </div>
         </header>
 
-     <div class="row">
-        <div class="col-md-2" ></div>
-        <div class="col-md-8" >
+     <div class="row ">
+        <div class="col-md-2 " ></div>
+        <div class="col-md-8 bg-light" >
            <table class="table table-striped ">
     {{-- dropdown --}}
     

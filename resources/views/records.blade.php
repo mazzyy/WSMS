@@ -1,32 +1,46 @@
 @extends('layouts.app')
+
+@section('navbar')
+    <a href="/" class="btn btn-light"><h5>Logout</h5></a>
+@endsection
+
 @section('left')
+
 <div class="bg-light">
+@if( Auth::user())
 <a href="/dashboard" class="btn btn-light"><h3>&#8592;</h3></a>
-<form name="record" method="GET" onsubmit="return validateForm()" action="/dashboard/{{$id}}/client/record"  style="padding-top: 21%" class="border-right pr-2">
+
+<form name="record" method="GET" required action="/dashboard/{{$id}}/client/record"  style="padding-top: 21%" class="border-right pr-2">
   <h1>RECORDS</h1>
   <div class="form-group">
     <label for="exampleFormControlInput1">Bottles</label>
-    <input name="bottle" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Abdul">
+    <input required name="bottle" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Abdul">
   </div>
   <div class="form-group">
       <label for="exampleFormControlInput1">Day</label>
-      <input name="day" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Number">
+      <input required name="day" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Number">
   </div>
  
 <input type="hidden" name="client_id" id="" value="{{$id}}">
 <input type="hidden" name="date_id" id="" value="{{$currentdate}}">
   <button type="submit" class="btn btn-primary mb-2">Confirm</button>
 </form>
+@endif
 
 </div>
 @endsection
 
 @section('content')
 <header  class="p-2 mb-2 bg-dark text-white">
+{{-- logout --}}
+
+ 
+  
   {{-- date select --}}
-    <form name="date"  action="/dashboard/{{$id}}/date" onsubmit="return validateForm()">
+  
+    <form name="date"  action="/dashboard/{{$id}}/date" >
         <label for="bdaymonth">Data record (month and year):</label>
-        <input  name="bdaymonth1" type="month" id="bdaymonth">
+        <input required name="bdaymonth1" type="month" id="bdaymonth">
     <input type="hidden" id="bdaymonth" name="id" value="{{$id}}">
         <input type="submit">
     </form> 
@@ -59,10 +73,12 @@
       <td>{{$item->number}}</td>
       <td>{{$item->address}}</td>
   <td>
+  @if (Auth::user())
 <form action="/dashboard/{{$item->id}}/delete" method="GET">
 <input type="hidden" value="{{$currentdate}}" name="record">
   <input type="submit" class="btn btn-dark" value="DELETE">
 </form>
+@endif
   </td>
       {{-- <td><a href="/dashboard/{{$item->id}}/delete" type="submit" name="delete" class="btn btn-dark">DELETE</a></td> --}}
     </tr>
@@ -75,18 +91,7 @@
     @endif
   </tbody>
 </table>
+
 @endsection
 
 
-<script>
-  function validateForm() {
-  var x = document.forms["record"]["bottle"].value;
-  var y = document.forms["record"]["day"].value;
-  var z = document.forms["date"]["bdaymonth1"].value;
-
-  if (x == "" || y=="" || z=="") {
-    alert("form must be filled out");
-    return false;
-}
-}
-  </script>

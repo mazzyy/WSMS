@@ -7,6 +7,9 @@ use App\Models\Record;
 use App\Models\clients;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
+use App\Models\Date;
+ 
 
 class clientController extends Controller
 {
@@ -122,9 +125,12 @@ class clientController extends Controller
 
 
     public function mystore(Request $request){
+      
+
        $client =new clients();
        $userId = Auth::id();
        $client->user_id=$userId;
+       $client->password=Str::random(8);
        $client->name=$request->input('name');
        $client->number=$request->input('number');
        $client->address=$request->input('address');       
@@ -173,4 +179,44 @@ class clientController extends Controller
                  
         return redirect()->back();
     }
+
+public function loginclient(){
+
+  
+
+
+ return view("clientlogin");
+}
+
+public function clientloginauth(Request $request){
+
+    $number=$request->input("number");  
+    $password=$request->input("password");  
+
+  if(clients::where([['password', $password],['number', $number]] )->exists())
+    {
+        $client=clients::where([['password', $password],['number', $number]])->get();
+        $id=$client[0]->id;   
+        // dd($client[0]->id);
+
+        //current date
+        $date = Carbon::now();
+        $date=array($date->year,$date->month);
+        $dateid=Date::where([['year', $date[0]],['month', $date[1]]])->get();
+       
+        //record
+        $client_record=record::where([['client_id',$id],['date_id',$dateid[0]->id]])->get();
+        $sum=record::where([['client_id',$id],['date_id',$dateid[0]->id]])->sum("bottlphpe");
+
+  
+      return view("records")->with('id',$id)->with('date',$date)->with('client_record',$client_record)->with("currentdate",$dateid[0]->id)->with("sum",$sum);
+    }
+       
+ 
+  
+    return redirect()->back();
+   }
+
+
+
 }
