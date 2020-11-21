@@ -40,57 +40,68 @@ Home page is where a user can view all registered companies with their location 
 
 Company can register or login
 
+![company register](https://user-images.githubusercontent.com/38830975/99871577-c498ca80-2bfd-11eb-9810-c1a8ff31deef.png)
+
 Client can login only
 
-![](RackMultipart20201121-4-zzwos7_html_ce1b2e4975920189.png)
+![home](https://user-images.githubusercontent.com/38830975/99871587-cb274200-2bfd-11eb-9577-05c4db6fa176.png)
+![home2](https://user-images.githubusercontent.com/38830975/99871589-cbbfd880-2bfd-11eb-8ee3-25b26a4fee44.png)
 
-![](RackMultipart20201121-4-zzwos7_html_1904ad730d75b9af.png)
 
 **Company Register Page**
 
 This is where a company can register itself/
 
-![](RackMultipart20201121-4-zzwos7_html_ee081188d4f5c70a.png)
+![company register](https://user-images.githubusercontent.com/38830975/99871532-64098d80-2bfd-11eb-9757-8a2297d98df9.png)
+
 
 **Login Page For Company**
 
-![](RackMultipart20201121-4-zzwos7_html_478617b451dd71ad.png)
+
+![w login](https://user-images.githubusercontent.com/38830975/99871595-ce223280-2bfd-11eb-9896-1c0c2e8447b1.png)
 
 **Reset Page**
 
 In case user forget their password
 
-![](RackMultipart20201121-4-zzwos7_html_bb91554355a3351.png)
+
+![forget password](https://user-images.githubusercontent.com/38830975/99871586-ca8eab80-2bfd-11eb-8a64-e3fdf2501837.png)
 
 **After Company login**
 
 Company can create client, view all clients set there status, Edit or Delete
 
-![](RackMultipart20201121-4-zzwos7_html_9a59139e1f17dc2b.png)
+![dashbord](https://user-images.githubusercontent.com/38830975/99871581-c82c5180-2bfd-11eb-8b79-f58d28dfb0c6.png)
+
 
 **Create Client**
 
 Create client information where an auto generate password is set for client login and for company to set the record
 
-![](RackMultipart20201121-4-zzwos7_html_eaa795beac574671.png)
+![create client](https://user-images.githubusercontent.com/38830975/99871580-c793bb00-2bfd-11eb-961b-8b584b292998.png)
+![client login 2](https://user-images.githubusercontent.com/38830975/99871518-4ccaa000-2bfd-11eb-984f-8c00ba03c939.png)
+
+
 
 **Client Record**
 
 On this page record based on year and month is recorded, Moreover record can be set for every year and month view or delete.
 
-![](RackMultipart20201121-4-zzwos7_html_a9dc15806a920df9.png)
+![client record](https://user-images.githubusercontent.com/38830975/99871530-62d86080-2bfd-11eb-924c-ac572cca6edc.png)
 
 **Records**
 
 Where records for user are set
 
-![](RackMultipart20201121-4-zzwos7_html_ba89518be659efcc.png)
+![record](https://user-images.githubusercontent.com/38830975/99871594-cd899c00-2bfd-11eb-839e-6dbb1f764561.png)
 
 **Date**
 
 Every date record is viewed through this section from selecting years then month
 
-![](RackMultipart20201121-4-zzwos7_html_3758a88ddc2281ed.png) ![](RackMultipart20201121-4-zzwos7_html_4d57f3444310262c.png)
+![data1](https://user-images.githubusercontent.com/38830975/99871582-c95d7e80-2bfd-11eb-93fc-af7b7154a7b9.png)
+![data2](https://user-images.githubusercontent.com/38830975/99871585-c9f61500-2bfd-11eb-9333-0b3432534553.png)
+
 
 Client password can be viewed through password button where a popup window will show
 
@@ -98,7 +109,11 @@ Client password can be viewed through password button where a popup window will 
 
 **Login through client**
 
-![](RackMultipart20201121-4-zzwos7_html_8b7a0e37caf3ab82.png)
+
+![login client](https://user-images.githubusercontent.com/38830975/99871591-cc586f00-2bfd-11eb-826c-9bafb887b960.png)
+
+
+![password viewed](https://user-images.githubusercontent.com/38830975/99871592-ccf10580-2bfd-11eb-926f-19be5af88fa7.png)
 
 Client can login through their mobile number and password provided by company
 
@@ -106,4 +121,4 @@ Client can login through their mobile number and password provided by company
 
 There monthly record can be seen with number of bottles they bought
 
-![](RackMultipart20201121-4-zzwos7_html_bddeb9c900cd256d.png)
+![client dashboard](https://user-images.githubusercontent.com/38830975/99871506-3b819380-2bfd-11eb-8d91-47c500f82263.png)
