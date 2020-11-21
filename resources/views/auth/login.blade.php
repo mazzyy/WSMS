@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div style="background-image: linear-gradient(-135deg,#06beb62e ,#4158d01f);" class="card-header text-white">{{ __('Login') }}</div>
+                <div style="background-image: linear-gradient(-135deg,#06beb62e ,#4158d01f);" class="card-header text-dark">{{ __('Login') }}</div>
 
                 <div class="card-body" >
                     <form s method="POST" action="{{ route('login') }}">

@@ -19,7 +19,7 @@ body {
   
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
+  background: linear-gradient(-135deg,#06beb638 ,#56202045);
   
 }
 </style>
@@ -29,7 +29,8 @@ body {
             
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{-- {{ config('app.name', 'HOME') }} --}}
+                
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -90,7 +91,7 @@ body {
             </div>
         </nav>
         
-        <header class="border">
+        <header class="">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">

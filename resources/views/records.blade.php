@@ -2,7 +2,9 @@
 
 @section('navbar')
     <a href="/" class="btn btn-light"><h5>Logout</h5></a>
+
 @endsection
+
 
 @section('left')
 
@@ -33,8 +35,15 @@
 @section('content')
 <header  class="p-2 mb-2 bg-dark text-white">
 {{-- logout --}}
-
+@php
+    use App\Models\clients;
+    $password=clients::where('id',$id)->get('password');
+    
+@endphp
  
+{{--  --}}
+
+
   
   {{-- date select --}}
   
@@ -43,6 +52,11 @@
         <input required name="bdaymonth1" type="month" id="bdaymonth">
     <input type="hidden" id="bdaymonth" name="id" value="{{$id}}">
         <input type="submit">
+      
+        <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#exampleModal">
+         password
+        </button>
+        
     </form> 
 </header>
 {{-- table for records --}}
@@ -91,6 +105,29 @@
     @endif
   </tbody>
 </table>
+
+
+
+<!-- Modal -->
+<div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Client Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       {{$password[0]->password}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
 

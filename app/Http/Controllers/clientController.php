@@ -209,7 +209,7 @@ public function clientloginauth(Request $request){
         $sum=record::where([['client_id',$id],['date_id',$dateid[0]->id]])->sum("bottlphpe");
 
   
-      return view("records")->with('id',$id)->with('date',$date)->with('client_record',$client_record)->with("currentdate",$dateid[0]->id)->with("sum",$sum);
+      return view("clienthome")->with('id',$id);
     }
        
  

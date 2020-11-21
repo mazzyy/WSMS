@@ -5,14 +5,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div style="background-image: linear-gradient(-135deg,#06beb62e ,#4158d01f);" class="card-header text-white">{{ __('Login') }}</div>
+                <div style="background-image: linear-gradient(-135deg,#06beb62e ,#4158d01f);" class="card-header text-dark">{{ __('Login') }}</div>
 
                 <div class="card-body" >
                     <form s method="POST" action="/client/home">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Number') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="number" class="form-control @error('email') is-invalid @enderror" name="number"  required autocomplete="email" autofocus>
