@@ -56,7 +56,7 @@ This is where a company can register itself/
 
 ![](RackMultipart20201121-4-zzwos7_html_478617b451dd71ad.png)
 
-**Reset**** Page**
+**Reset Page**
 
 In case user forget their password
 
