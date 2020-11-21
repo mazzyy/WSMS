@@ -74,7 +74,7 @@ Create client information where an auto generate password is set for client logi
 
 ![](RackMultipart20201121-4-zzwos7_html_eaa795beac574671.png)
 
-**Client**** Record**
+**Client Record**
 
 On this page record based on year and month is recorded, Moreover record can be set for every year and month view or delete.
 
