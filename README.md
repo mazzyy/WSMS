@@ -37,16 +37,11 @@ After studying design interface of many university portals our idea of an outcom
 **Homepage**
 
 Home page is where a user can view all registered companies with their location and information including their clients.
-
 Company can register or login
-
-![company register](https://user-images.githubusercontent.com/38830975/99871577-c498ca80-2bfd-11eb-9810-c1a8ff31deef.png)
-
 Client can login only
 
 ![home](https://user-images.githubusercontent.com/38830975/99871587-cb274200-2bfd-11eb-9577-05c4db6fa176.png)
 ![home2](https://user-images.githubusercontent.com/38830975/99871589-cbbfd880-2bfd-11eb-8ee3-25b26a4fee44.png)
-
 
 **Company Register Page**
 
@@ -79,9 +74,6 @@ Company can create client, view all clients set there status, Edit or Delete
 Create client information where an auto generate password is set for client login and for company to set the record
 
 ![create client](https://user-images.githubusercontent.com/38830975/99871580-c793bb00-2bfd-11eb-961b-8b584b292998.png)
-![client login 2](https://user-images.githubusercontent.com/38830975/99871518-4ccaa000-2bfd-11eb-984f-8c00ba03c939.png)
-
-
 
 **Client Record**
 
@@ -105,15 +97,12 @@ Every date record is viewed through this section from selecting years then month
 
 Client password can be viewed through password button where a popup window will show
 
-![](RackMultipart20201121-4-zzwos7_html_75d599dab290db31.png)
+![password viewed](https://user-images.githubusercontent.com/38830975/99871592-ccf10580-2bfd-11eb-926f-19be5af88fa7.png)
 
 **Login through client**
 
-
 ![login client](https://user-images.githubusercontent.com/38830975/99871591-cc586f00-2bfd-11eb-826c-9bafb887b960.png)
-
-
-![password viewed](https://user-images.githubusercontent.com/38830975/99871592-ccf10580-2bfd-11eb-926f-19be5af88fa7.png)
+![client login 2](https://user-images.githubusercontent.com/38830975/99871518-4ccaa000-2bfd-11eb-984f-8c00ba03c939.png)
 
 Client can login through their mobile number and password provided by company
 
