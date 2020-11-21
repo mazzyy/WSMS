@@ -89,13 +89,13 @@ Where records for user are set
 
 **Date**
 
-Every date record is viewed through this section from selecting years then month
+Every date record is viewed through this section by selecting years and month
 
 ![data1](https://user-images.githubusercontent.com/38830975/99871582-c95d7e80-2bfd-11eb-93fc-af7b7154a7b9.png)
 ![data2](https://user-images.githubusercontent.com/38830975/99871585-c9f61500-2bfd-11eb-9333-0b3432534553.png)
 
 
-Client password can be viewed through password button where a popup window will show
+Client password can be viewed through the password button with a popup window 
 
 ![password viewed](https://user-images.githubusercontent.com/38830975/99871592-ccf10580-2bfd-11eb-926f-19be5af88fa7.png)
 
